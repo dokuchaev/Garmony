@@ -60,7 +60,7 @@ var path = {
     src: {
         html: 'app/*.html',
         js: 'app/js/*.js',
-        style: 'app/css/*.*',
+        style: 'app/scss/*.*',
         img: ['app/images/**/*.*', '!./app/images/sprite/**'],
         sprite: 'app/images/sprite/**/*.*',
         fonts: 'app/fonts/**/*.*'
@@ -68,7 +68,7 @@ var path = {
     watch: {
         html: 'app/**/*.html',
         js: 'app/js/**/*.js',
-        style: 'app/css/**/*.*',
+        style: 'app/scss/**/*.*',
         img: 'app/images/**/*.*',
         fonts: 'app/fonts/**/*.*'
 
@@ -127,9 +127,9 @@ gulp.task('js:build', function () {
         .pipe(uglify())
 
         .pipe(sourcemaps.write())
-        .pipe(rename({
+/*         .pipe(rename({
             suffix: '.min'
-        }))
+        })) */
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({stream: true}));
 });
