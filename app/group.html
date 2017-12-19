@@ -11,28 +11,123 @@
         </div>
         <div class="col-12 group-block">
             <div class="row">
-             
-                
-          <div class="col-4">
+
+          <div class="col-lg-4 col-md-6 col-xs-12">
                 <nav class="nav flex-column nav-left">
-                        <a class="nav-link active" href="#">Россия</a>
-                        <a class="nav-link" href="#">Link</a>
-                        <a class="nav-link" href="#">Link</a>
-                        <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                                <div class="dropdown-menu">
-                                  <a class="dropdown-item" href="#">Action</a>
-                                  <a class="dropdown-item" href="#">Another action</a>
-                                  <a class="dropdown-item" href="#">Something else here</a>
-                                  <div class="dropdown-divider"></div>
-                                  <a class="dropdown-item" href="#">Separated link</a>
-                                </div>
-                              </li>
-                        <a class="nav-link disabled" href="#">Disabled</a>
+                    
+                       <ul class="cd-accordion-menu">
+	<li class="has-children">
+		<input type="checkbox" name ="group-1" id="group-1" checked>
+		<label for="group-1"> <img class="menu-flag" src="../images/group/ic_russia.png" />Россия</label>
+
+  		<ul>
+  			<li class="has-children">
+  				<input type="checkbox" name ="sub-group-1" id="sub-group-1" checked>
+				<label for="sub-group-1">Москва</label>
+
+				<ul>
+
+					<li><a href="#0">Группа “Цигун”</a></li>
+					<li><a href="#0" class="active-link">Группа “Крийя-Йога”</a></li>
+
+				</ul>
+  			</li>
+
+              <li class="has-children">
+  				<input type="checkbox" name ="sub-group-2" id="sub-group-2">
+				<label for="sub-group-2">Санкт-Петербург</label>
+
+				<ul>
+					<li><a href="#0">Группа “Крийя-Йога”</a></li>
+                    <li><a href="#0">Группа “Цигун”</a></li>
+
+				</ul>
+  			</li>
+
+               <li class="has-children">
+  				<input type="checkbox" name ="sub-group-3" id="sub-group-3">
+				<label for="sub-group-3">Калининград</label>
+
+				<ul>
+					<li><a href="#0">Группа “Крийя-Йога”</a></li>
+                    <li><a href="#0">Группа “Цигун”</a></li>
+
+				</ul>
+  			</li>
+
+                             <li class="has-children">
+  				<input type="checkbox" name ="sub-group-4" id="sub-group-4">
+				<label for="sub-group-4">Воронеж</label>
+
+				<ul>
+					<li><a href="#0">Группа “Крийя-Йога”</a></li>
+                    <li><a href="#0">Группа “Цигун”</a></li>
+
+				</ul>
+  			</li>
+
+  	
+  		</ul>
+	</li>
+
+<li class="has-children">
+		<input type="checkbox" name ="group-5" id="group-5">
+		<label for="group-5"><img class="menu-flag" src="../images/group/ic_ucraina.png" />Украина</label>
+
+  		<ul>
+  			<li class="has-children">
+  				<input type="checkbox" name ="sub-group-6" id="sub-group-6">
+				<label for="sub-group-6">Киев</label>
+
+				<ul>
+
+					<li><a href="#0">Группа “Цигун”</a></li>
+					<li><a href="#0">Группа “Крийя-Йога”</a></li>
+
+				</ul>
+  			</li>
+
+              <li class="has-children">
+  				<input type="checkbox" name ="sub-group-7" id="sub-group-7">
+				<label for="sub-group-7">Харьков</label>
+
+				<ul>
+					<li><a href="#0">Группа “Крийя-Йога”</a></li>
+                    <li><a href="#0">Группа “Цигун”</a></li>
+
+				</ul>
+  			</li>
+
+               <li class="has-children">
+  				<input type="checkbox" name ="sub-group-8" id="sub-group-8">
+				<label for="sub-group-8">Львов</label>
+
+				<ul>
+					<li><a href="#0">Группа “Крийя-Йога”</a></li>
+                    <li><a href="#0">Группа “Цигун”</a></li>
+
+				</ul>
+  			</li>
+
+        
+
+  	
+  		</ul>
+	</li>
+    <li class="has-children">
+		<input type="checkbox" name ="group-10" id="group-10" >
+		<label for="group-10"><img class="menu-flag" src="../images/group/ic_belarus.png" />Беларусь</label>
+	</li>
+
+        <li class="has-children">
+		<input type="checkbox" name ="group-11" id="group-11" >
+		<label for="group-11"><img class="menu-flag" src="../images/group/ic_kitay.png" />Китай</label>
+	</li>
+</ul> <!-- cd-accordion-menu -->
                      
                       </nav>
           </div>
-          <div class="col-5">
+          <div class="col-xl-5 col-lg-4 col-md-6">
       <div class="event-name">О сообществе</div>
                 <div class="group-item">
                 <div class="prog-title">Описание группы:</div>
@@ -59,7 +154,7 @@
                 </a>
             </div>
           </div>
-          <div class="col-3">
+          <div class="col-lg-3 col-md-12 justify-content-center">
                 <div id="vk_groups"></div> 
                 <script type="text/javascript"> 
                 VK.Widgets.Group("vk_groups", {mode: 0, width: "248", height: "400"}, 1); 
