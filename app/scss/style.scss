@@ -67,6 +67,8 @@ html {
   margin: 0;
 
   background: #d4dcdf;
+
+  font-family: $font-Open; 
 }
 
 .font-bold{
@@ -79,6 +81,24 @@ background-color: $main-color;
 
 .navbar-main{
     padding: 0rem 4rem;
+    min-height: 50px;
+    .navbar-toggler{
+        border: 1px solid #ccc;
+        margin-top: 5px;
+    }
+    @media (max-width: 992px){
+        padding: 0rem 0rem; 
+    }
+}
+@media (max-width: 992px){
+.navbar-collapse{
+    margin-top: 50px;
+}
+}
+
+.fa-bars{
+    font-size: 30px;
+    color: #fff;
 }
 
 .navbar-main .nav-link{
@@ -215,6 +235,52 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', e
       font-size: 24px;
       padding: 14px 38px;
   }
+
+  .site-map{
+      margin-top: 3px;
+      margin-left: 150px;
+      .nav-link{
+    font-size: 10px!important;
+    background: red;
+    border-radius: 100%;
+    width: 51px;
+    height: 51px;
+    padding: 0px!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;  
+    transition: ease-in-out .3s;
+    @media (max-width: 992px){
+        background: none;
+        font-size: 18px!important;
+        width: auto;
+        height: auto;
+        border-radius: 0;
+        display: block;
+        padding: .9em 15px!important;
+        text-align: left;
+    }
+      }
+
+      @media (max-width: 992px){
+        margin-top: 0px;
+        margin-left: 0px; 
+      }
+
+  }
+
+  .navbar-main .nav-item.site-map {
+    &:hover{
+        background: none;
+              .nav-link{
+                    background: #a90000;
+          transition: ease-in-out .3s;
+      }
+      }
+
+  }
+
 
 .h1-mt{
     margin-top: 95px;
@@ -609,7 +675,7 @@ font-size: 14px;
 
 .event{
     background: url(../images/event/event-bg.png) no-repeat;
-    padding-top: 60px;
+    padding-top: 40px;
     padding-bottom: 40px;
 
 }
@@ -643,6 +709,7 @@ font-size: 14px;
     font-size: 30px;
     font-family: $font-title;
     color: $main-color;
+    line-height: 1.2;
     @media(max-width:768px){
             font-size: 28px;
     }
@@ -941,6 +1008,14 @@ font-size: 12px;
 line-height: 1.2;
 font-family: $font-Open;
 text-decoration: underline;
+margin-bottom: 15px;
+a{
+  color: #323232;  
+  &:hover{
+      color: $main-color;
+  }
+}
+
  }
 
  .video-block iframe{
@@ -957,7 +1032,7 @@ text-decoration: underline;
 
  .lecture-info .btn-like{
     position: absolute;
-    right: 1rem !important;
+    right: 1.5rem !important;
     top: 0;
     padding: 6px 105px 5px 15px;
  }
@@ -969,14 +1044,15 @@ text-decoration: underline;
 
  .video-main iframe{
      width: 100%;
-
  }
 
  .lecture-info-list{
     font-size: 14px;
-  color: #525658;
+    color: #525658;
     font-family: $font-Open; 
     margin-top: 10px;
+    line-height: 1.7;
+    padding-left: 15px;
  }
 
  .lecture-info-title{
@@ -986,8 +1062,152 @@ text-decoration: underline;
  .lecture-info-feed{
     color:#949494;
     line-height: 1.2;
- border-bottom: 1px solid #949494;
+
  display: inline-block;
  margin-left: 45px;
+ a{
+  color: inherit;  
+   border-bottom: 1px solid #949494;
+  &:hover{
+      text-decoration: none;
+      color: #7095ba;
+      border-bottom: 1px solid #7095ba;
+  } 
+ }
  }
  
+
+ .doc-item{
+    align-items: center;
+    display: flex;
+    span{
+        padding-left: 50px;
+    }
+ }
+
+ .doc-item-pdf:before{
+    content: '';
+    position: absolute;
+    background: url(../images/vnut/pdf-icon.png) no-repeat;
+    width: 35px;
+    height: 35px;
+ }
+
+ .doc-item-word:before{
+    content: '';
+    position: absolute;
+    background: url(../images/vnut/word-icon.png) no-repeat;
+    width: 35px;
+    height: 35px;
+ }
+
+ .doc-item-other:before{
+    content: '';
+    position: absolute;
+    background: url(../images/vnut/file-icon.png) no-repeat;
+    width: 35px;
+    height: 35px;
+ }
+
+ .doc-row{
+     margin-bottom: 25px;
+     margin-top: 15px
+ }
+
+ .lec-desc {
+     font-size: 18px;
+     color: $main-color;
+ }
+
+.lecture-item iframe{
+    max-width: 133px;
+ max-height: 93px;
+ width: 100%; 
+}
+
+
+
+
+/* question */
+.question{
+background: #fff;
+padding-left: 50px;
+padding-right: 50px;
+padding-bottom: 30px;
+}
+
+.btn-search-q{
+width: 60px;
+background-color: #fcfbfa;
+border: 1px solid #ccc;
+border-left: none;
+border-radius: 0;
+cursor: pointer;
+   .fa-search{
+        color: $main-color;
+    }
+}
+
+
+.input-height{
+    height: 50px;
+    align-items: center;
+    display: inline-flex;
+}
+
+.br-none{
+    border-radius: 0;
+}
+
+.question-title{
+color: #2e4a69;
+font-size: 18px;
+}
+
+.answer{
+color: #525658;
+font-size: 14px;
+border-bottom: 1px solid #cbcbcb;
+padding-left: 0;
+margin-left: 15px;
+text-indent: 40px;
+padding-top: 10px;
+padding-bottom: 15px;
+
+}
+
+.b-n{
+    border: none;
+}
+
+.question-date{
+    color: #cbcbcb;
+    font-size: 14px;
+    padding-left: 50px;
+    
+}
+
+.breadcrumbs{
+    font-size: 18px;
+    color: $main-color;
+    margin-left: 30px;
+    &:before{
+        content: '';
+        width: 25px;
+        height: 25px;
+        background: red;
+        border-radius: 100%;
+        position: absolute;
+        margin-left: -30px;
+        margin-top: 3px;
+    }
+}
+
+.breadcrumbs-hr{
+    height: 1px;
+    width: 25%;
+    margin-left: 0;
+    margin-top: 1px;
+    margin-bottom: 0;
+
+}

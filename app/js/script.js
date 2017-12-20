@@ -23,7 +23,22 @@ $(document).ready(function(){
       arrows: true,
       dots: true,
     });
+
+    /* слайдер с другими отзывами */
+    $('.lecture-slider').slick({
+  
+      slidesToScroll: 1,
+      rows: 2,
+      slidesPerRow: 8,
+      arrows: true,
+      dots: false,
+    })
 });
+
+
+;
+
+
 
 
 
