@@ -13,6 +13,33 @@ $(document).ready(function(){
       slidesToScroll: 1,
       arrows: true,
       dots: false,
+      responsive: [
+
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow:2,
+            slidesToScroll: 1,
+         
+          }
+        },
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow:2,
+            slidesToScroll: 1,
+           
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+         
+          }
+        },
+      ]
     });
     
 
@@ -32,6 +59,27 @@ $(document).ready(function(){
       slidesPerRow: 8,
       arrows: true,
       dots: false,
+      responsive: [
+        
+                {
+                  breakpoint: 1200,
+                  settings: {
+                    slidesPerRow:4,
+                  }
+                },
+                {
+                  breakpoint: 992,
+                  settings: {
+                    slidesPerRow:3,
+                  }
+                },
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesPerRow:1,
+                  }
+                },
+              ]
     })
 });
 
@@ -85,3 +133,12 @@ $('#datepicker').on('changeDate', function() {
         $('#datepicker').datepicker('getFormattedDate')
     );
 });
+
+
+
+/* hidden search */
+
+$('.search-btn').click(function(event){
+  event.preventDefault();
+ $('.hidden-search').slideToggle('500')
+})
